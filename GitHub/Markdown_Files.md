@@ -66,17 +66,19 @@ TABLE
 The second line above is necessary with at least 3 dashes to create the table!
 
 ITEM
-- Unordered item
-* Also unordered item
+- Unordered item with `-`
+* Also unordered item with `*`
 
 1. First item
 1. Second item
    - Inner item with `-`
      - More inner item with `-`
      * More inner item with `*`
-   * Inner item with `*`
-     - More inner item with `-`
-     * More inner item with `*`
+
+- Unordered item with `-`
+  - Inner item with `-`
+    - More inner item with `-`
+    - More inner item with `-`
 
 Above even we type numbers wrongly, it automatically writes them correctly in turn. Plus, putting **3 spaces** under an ordered item and **2 spaces** under an unordered item properly indents the below item!
 
