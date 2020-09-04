@@ -71,8 +71,12 @@ ITEM
 
 1. First item
 1. Second item
-   - Inner item
-     - More inner item
+   - Inner item with `-`
+     - More inner item with `-`
+     * More inner item with `*`
+   * Inner item with `*`
+     - More inner item with `-`
+     * More inner item with `*`
 
 Above even we type numbers wrongly, it automatically writes them correctly in turn. Plus, putting **3 spaces** under an ordered item and **2 spaces** under an unordered item properly indents the below item!
 
