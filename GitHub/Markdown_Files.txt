@@ -52,7 +52,9 @@ git status
 git add .
 ```
 
-```"Yes" if True "No" else```
+```python
+"Yes" if True "No" else
+```
 
 TABLE
 |Heading 1 |Heading 2 |Heading 3 |
@@ -70,7 +72,7 @@ ITEM
 1. First item
 1. Second item
    - Inner item
-    - More inner item
+     - More inner item
 
 Above even we type numbers wrongly, it automatically writes them correctly in turn. Plus, putting **3 spaces** under an ordered item and **2 spaces** under an unordered item properly indents the below item!
 
