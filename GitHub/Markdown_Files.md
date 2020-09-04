@@ -19,7 +19,7 @@ LINK\
 [Google](https://www.google.com "Hover Explanation")\
 [Twitter](https://www.twitter.com "Blue Bird")
 ```
-[Google](https://www.google.com "Hover Explanation")\
+[Google](https://www.google.com "Hover Explanation")
 [Twitter](https://www.twitter.com "Blue Bird")
 
 ```
@@ -30,7 +30,7 @@ IMAGE\
 ![Pirate Logo](https://brandingbycontext.com/images/nice-logo-portfolio/jack-oneill-logo-designer.jpg "Pirate")
 ```
 
-To resize the image it's better we use `<img>` tag in order to compensate it on all devices,
+To resize the image it's better we use `<img>` tag in order to compensate it on all devices,\
 <img src="https://brandingbycontext.com/images/nice-logo-portfolio/jack-oneill-logo-designer.jpg" alt="Pirate Logo" title="Pirate" width="220" height="220">
 ```html
 <img src="https://brandingbycontext.com/images/nice-logo-portfolio/jack-oneill-logo-designer.jpg" alt="Pirate Logo" title="Pirate" width="220" height="220">
@@ -53,7 +53,7 @@ git add .
 ```
 
 TABLE
-|Table Heading 1 |TH2 |TH3 |
+|Heading 1 |Heading 2 |Heading 3 |
 |--- |--- |--- |
 |00 |01 |02 |
 |10 |11 |12 |
