@@ -1,24 +1,24 @@
 **Delete A Commit Permenantly and Properly
 1. We can use `rebase` to delete commits,
-  ```bash
-  git rebase -i HEAD~10
-  ```
-  For example the code above will open us our favorite editor with listing the last 10 commits we made. But here it lists from oldest to newest from top to bottom,
+   ```bash
+   git rebase -i HEAD~10
+   ```
+   For example the code above will open us our favorite editor with listing the last 10 commits we made. But here it lists from oldest to newest from top to bottom,
     ```
-    pick 5c6eb73 Added repo.or.cz link
-    pick a311a64 Reordered analogies in "Work How You Want"
-    pick 100834f Added push target to Makefile
+     pick 5c6eb73 Added repo.or.cz link
+     pick a311a64 Reordered analogies in "Work How You Want"
+     pick 100834f Added push target to Makefile
     ```
-  So here, 5c6eb73 is the oldest commit, and 100834f is the newest. Then we can,
-    - Remove commits by deleting lines. Like the revert command, but off the record: it will be as if the commit never existed.
-    - Reorder commits by reordering lines.
-    - Replace pick with:
-      - `edit` to mark a commit for amending.
-      - `reword` to change the log message.
-      - `squash` to merge a commit with the previous one.
-      - `fixup` to merge a commit with the previous one and discard the log message.
-    More on (http://www-cs-students.stanford.edu/~blynn/gitmagic/ch05.html#_8230_and_then_some)
-  Lecture on rebase (https://www.atlassian.com/git/tutorials/rewriting-history/git-rebase)
+   So here, 5c6eb73 is the oldest commit, and 100834f is the newest.  Then we can,
+     - Remove commits by deleting lines. Like the revert command, but off the record: it will be as if the commit never existed.
+     - Reorder commits by reordering lines.
+     - Replace pick with:
+       - `edit` to mark a commit for amending.
+       - `reword` to change the log message.
+       - `squash` to merge a commit with the previous one.
+       - `fixup` to merge a commit with the previous one and discard the log message.
+     More on (http://www-cs-students.stanford.edu/~blynn/gitmagic/ch05.html#_8230_and_then_some)
+   Lecture on rebase (https://www.atlassian.com/git/tutorials/rewriting-history/git-rebase)
 
 2. After deleting the commits, we have to push our updated local commits to our online git repository,
   ```
