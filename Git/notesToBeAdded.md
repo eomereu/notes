@@ -1,7 +1,7 @@
 ## Delete A Commit Permenantly and Properly
 1. We can use `rebase` to delete commits,
    ```bash
-   git rebase -i HEAD~10
+   $ git rebase -i HEAD~10
    ```
    For example the code above will open us our favorite editor with listing the last 10 commits we made. But here it lists from oldest to newest from top to bottom,
     ```
@@ -22,16 +22,16 @@
 
 2. After deleting the commits, we have to push our updated local commits to our online git repository,
    ```
-   git push --force
+   $ git push --force
    ```
 
 ***
 
-## Pushing to GitHub with using SSH Key
+## Pushing to GitHub via SSH Key
 This allows us to push things without entering id password every time:
 1. First of all we have to [generate an SSH key](https://docs.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) on our machine,
    ```bash
-   ssh-keygen -t rsa -b 4096 -C "our_email@example.com"
+   $ ssh-keygen -t rsa -b 4096 -C "our_email@example.com"
    ```
   
 2. This creates a new ssh key, using the provided email as a label.
@@ -50,7 +50,7 @@ This allows us to push things without entering id password every time:
    > Enter same passphrase again: [Type passphrase again]
    ```
    - [To change the passphrase](https://docs.github.com/en/github/authenticating-to-github/working-with-ssh-key-passphrases),
-     ```bash
+     ```
      $ ssh-keygen -p
      # Start the SSH key creation process
      > Enter file in which the key is (/Users/you/.ssh/id_rsa): [Hit enter]
@@ -62,13 +62,13 @@ This allows us to push things without entering id password every time:
 
 5. After creating SSH key successfully let's add it to our GitHub account, under *Settings* click on *SSH and GPG keys* tab and hit **New SSH Key** button. Paste in the key on the opened window. To get this key,
    ```bash
-   vi ~/.ssh/id_rsa.pub
+   $ vi ~/.ssh/id_rsa.pub
    ```
    Copy exactly from the end (with be the last letter of your email domain extension) of the block of characters to the beginning, which starts with ssh-rs ...
 
 6. After completing till here now let's update our remote git links to SSH ones if they're already in HTTPS. To do this go to the related folder and type,
    ```
-   git remote set-url origin git@github.com:<Username>/<Project>.git
+   $ git remote set-url origin git@github.com:<Username>/<Project>.git
    ```
    Otherwise it will keep asking id password since it is binded to HTTPS connection!
 
