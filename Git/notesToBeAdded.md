@@ -75,4 +75,12 @@ This allows us to push things without entering id password every time:
 
 ***
 
+## Cloning a branch besides 'master' branch
+To clone another branch other than master we can type,
+```bash
+git clone -b mybranch --single-branch git://sub.domain.com/repo.git
+```
+
+***
+
 - [*Nano Editor* cheat sheet](https://monovm.com/post/35/how-to-exit-in-nano)
