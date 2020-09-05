@@ -75,10 +75,45 @@ This allows us to push things without entering id password every time:
 
 ***
 
+## How to Clone All Remote Branches
+Right after simply cloning and just getting only our 'master' branch of a git repository, we can simply [check all our remote branches](https://stackoverflow.com/questions/67699/how-to-clone-all-remote-branches-in-git) in the directory where we cloned the repository into with,
+```bash
+$ git branch -a
+```
+After this we will see i.e.
+```
+* master
+  remotes/origin/HEAD -> origin/master
+  remotes/origin/master
+  remotes/origin/test
+  remotes/origin/someotherbranch
+```
+At this point we can take a quick peek at an upstream branch,
+```bash
+$ git checkout origin/experimental
+```
+But if we want to work on that branch we need to create a local tracking branch which is done automatically by,
+```bash
+$ git checkout test
+```
+and we will see,
+```
+Branch experimental set up to track remote branch experimental from origin.
+Switched to a new branch 'experimental'
+```
+This actually means that it also got our wanted branch locally and we can work on it from that time on. So if we check local branches, we will see,
+```bash
+$ git branch
+* test
+  master
+```
+
+***
+
 ## Cloning a branch besides 'master' branch
 To clone another branch other than master we can type,
 ```bash
-git clone -b mybranch --single-branch git://sub.domain.com/repo.git
+$ git clone -b mybranch --single-branch git://sub.domain.com/repo.git
 ```
 
 ***
