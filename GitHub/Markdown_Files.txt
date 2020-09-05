@@ -4,7 +4,8 @@ NORMAL TEXT
 ### Heading 3
 .
 .
-.
+.\
+We can break line with **2 spaces** or simply with `\`!
 
 *Emphasized/Italic*\
 _Emphasized/Italic_
@@ -17,10 +18,23 @@ __Strong/Bold__
 LINK\
 [Google](https://www.google.com "Hover Explanation")\
 [Twitter](https://www.twitter.com "Blue Bird")
+```
+[Google](https://www.google.com "Hover Explanation")
+[Twitter](https://www.twitter.com "Blue Bird")
+
+```
 
 IMAGE\
-![Pirate Logo](https://brandingbycontext.com/images/nice-logo-portfolio/jack-oneill-logo-designer.jpg "Pirate" =220x220)
-Just as seen above we can add `=WIDTHxHEIGHT` part at the end. We can skip height and just write width...
+![Pirate Logo](https://brandingbycontext.com/images/nice-logo-portfolio/jack-oneill-logo-designer.jpg "Pirate")
+```
+![Pirate Logo](https://brandingbycontext.com/images/nice-logo-portfolio/jack-oneill-logo-designer.jpg "Pirate")
+```
+
+To resize the image it's better we use `<img>` tag in order to compensate it on all devices,\
+<img src="https://brandingbycontext.com/images/nice-logo-portfolio/jack-oneill-logo-designer.jpg" alt="Pirate Logo" title="Pirate" width="220" height="220">
+```html
+<img src="https://brandingbycontext.com/images/nice-logo-portfolio/jack-oneill-logo-designer.jpg" alt="Pirate Logo" title="Pirate" width="220" height="220">
+```
 
 BLOCKQUOTE
 >print("Blockquote")
@@ -38,24 +52,35 @@ git status
 git add .
 ```
 
+```python
+"Yes" if True "No" else
+```
+
 TABLE
-|Table Heading 1 |TH2 |TH3 |
+|Heading 1 |Heading 2 |Heading 3 |
 |--- |--- |--- |
 |00 |01 |02 |
 |10 |11 |12 |
 |20 |21 |22 |
-\
+
 The second line above is necessary with at least 3 dashes to create the table!
 
 ITEM
-- Unordered item
-* Also unordered item
+- Unordered item with `-`
+* Also unordered item with `*`
 
 1. First item
 1. Second item
-   - Inner item
-     * More inner item
-\Above even we type numbers wrongly, it automatically writes them correctly in turn. Plus, putting **3 spaces** under an ordered item and **2 spaces** under an unordered item properly indents the below item!
+   - Inner item with `-`
+     - More inner item with `-`
+     * More inner item with `*`
+
+- Unordered item with `-`
+  - Inner item with `-`
+    - More inner item with `-`
+    - More inner item with `-`
+
+Above even we type numbers wrongly, it automatically writes them correctly in turn. Plus, putting **3 spaces** under an ordered item and **2 spaces** under an unordered item properly indents the below item!
 
 HORIZONTAL LINE
 ***
